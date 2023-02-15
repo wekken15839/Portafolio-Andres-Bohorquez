@@ -1,0 +1,268 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+body{
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5{
+    margin: 0;
+}
+
+
+/*HEADER Y NAV*/
+.header{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(0,0,0);
+    color: white;
+    padding: 0 40px;
+}
+
+.header h2{
+    font-weight: 600;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.nav a:hover{
+    color: aquamarine;
+}
+
+.header i{
+    display: none;
+    font-size: 25px;
+    color: white;
+}
+
+.header i:hover{
+    color: aquamarine;
+}
+
+/*HOME*/
+.home{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0,0,0.8);
+}
+.home__background{
+    position: absolute;
+    background-image: url(https://jgestradam.com/assets/bg.webp);
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.home img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.home__text{
+    margin: 10px;
+    color: white;
+}
+
+.home__text h2{
+    color: aquamarine;
+    font-weight: 600;
+    font-size: 27px;
+}
+
+.home__text h4{
+    font-size: 19px;
+}
+
+/*SOBRE MÍ*/
+.about{
+    padding: 90px 40px;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.about img{
+    width: 100%;
+    height: 100%;
+}
+
+.about__content{
+    display: flex;
+    color: black;
+    gap: 100px;
+}
+
+.about__description{
+    flex: 0.8;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+
+.about__skills{
+    text-align: center;
+    flex: 1;
+}
+
+.about__skills h2{
+    margin-bottom: 25px;
+}
+
+.about__skills i{
+    font-size: 100px;
+    font-weight: 600;
+}
+
+.html{
+    color: rgb(255, 136, 0)
+}
+
+.css{
+    color: rgb(0,0,255);
+}
+
+.js{
+    color: rgb(255,255,0);
+}
+
+.java{
+    color: darkblue;
+}
+
+.skill__title{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.about__skills__languajes{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: black;
+    color: white;
+}
+
+.footer__container{
+    display: flex;
+    padding: 0 40px;
+    min-height: 80px;
+    align-items: center;
+}
+
+
+
+
+/*MEDIA QUERY*/
+@media screen and (max-width:768px){
+    /*MOSTRAR HAMBURGUESA*/
+    .header i{
+        display: block;
+    }
+
+    /*NAV*/
+    .nav{
+        position: fixed;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        top: -100vh;
+        left: 0;
+        padding-top: 80px;
+        background-color: black;
+        z-index: -1;
+        transition: 0.5s;
+    }
+
+    .header h2{
+        z-index: -1;
+    }
+
+    .nav__active{
+        top: 0;
+    }
+    
+    
+    .nav a{
+        display: block;
+        font-size: 25px;
+        padding: 15px;
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+
+    /*HOME*/
+    .home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*ABOUT*/
+    .about__content{
+        flex-direction: column;
+    }
+
+    .about__description h2{
+        text-align: center;
+    }
+
+
+    .about__skills__languajes{
+        gap: 30px;
+    }
+
+    .about__skills__languajes__item{
+        min-width: 50px;
+        min-height: 50px;
+    }
+    .about__skills h2{
+        margin-bottom: 35px;
+    }
+
+    /*FOOTER*/
+
+    .footer{
+        background-color: black;
+        color: white;
+    }
+
+    .footer__container{
+        display: flex;
+        min-height: 80px;
+        align-items: center;
+        padding: 0 40px;
+    }
+
+    .footer__text{
+        font-weight: 100;
+    }
+
+    
+}
+
+
